@@ -107,7 +107,7 @@
   opacity: 1;
 }
 .elementor-7 .elementor-element.elementor-element-2e422328 {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 .elementor-7 .elementor-element.elementor-element-48e055e2 {
   text-align: center;
@@ -167,6 +167,7 @@
   --e-column-margin-right: 10px;
   --e-column-margin-left: 10px;
   padding: 30px 30px 50px;
+  
 }
 .elementor-7
   .elementor-element.elementor-element-640629f3
@@ -192,6 +193,7 @@
   -webkit-mask-size: contain;
   -webkit-mask-position: center center;
   -webkit-mask-repeat: no-repeat;
+  
 }
 .elementor-7
   .elementor-element.elementor-element-578036f9.elementor-widget-image
