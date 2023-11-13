@@ -8,26 +8,26 @@
 
 .elementor-7 .elementor-element.elementor-element-88b3c86:not(.elementor-motion-effects-element-type-background),
 .elementor-7 .elementor-element.elementor-element-88b3c86 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
- background-image: url("../../2021/01/linkedin-sales-solutions-EI50ZDA-l8Y-unsplash.jpg"), url("../../2021/01/image_from_ios.jpg")url("../../2021/01//20220728_083028.png");
+ background-image: url("../../../../../../../img/img1/marche-asiatique-bambou-osier-paniers.jpg"), url("../../../../../../../img/img1/scene-marche-local-commercants-heureux-vendant-utilisant-son-telephone-pour-passer-appel-video.jpg"), url("../../../../../../../img/img1/img2.jpg"), url("../../../../../../../img/img1/vue-face-smiley-femme-noire-qui-dirige-entreprise.jpg");
  background-position: center center;
  background-size: cover;
- animation: slider 15s infinite;
+ animation: slider 18s infinite;
 }
 
 /* keyframe */
 @keyframes slider {
     0% {
-      background-image: url("../../2021/01/linkedin-sales-solutions-EI50ZDA-l8Y-unsplash.jpg");
+      background-image: url("../../../../../../../img/img1/marche-asiatique-bambou-osier-paniers.jpg");
    }
     50% {
-      background-image: url("../../2021/01/image_from_ios.jpg");
+      background-image: url("../../../../../../../img/img1/scene-marche-local-commercants-heureux-vendant-utilisant-son-telephone-pour-passer-appel-video.jpg");
    }
     75% {
-      background-image: url("../../2021/01/20220728_083028.png");
+      background-image: url("../../../../../../../img/img1/img2.jpg");
    }
 
    100% {
-    background-image: url("../../2021/01/linkedin-sales-solutions-EI50ZDA-l8Y-unsplash.jpg");
+    background-image: url("../../../../../../../img/img1/vue-face-smiley-femme-noire-qui-dirige-entreprise.jpg");
  }
   }
 
