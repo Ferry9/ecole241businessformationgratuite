@@ -26,6 +26,27 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
+
+
+
+    .slide.active {
+        display: block;
+        opacity: 1;
+    }
+
+.slide {
+        display: none;
+		transition: opacity 4s ease-in-out;
+    }
+
+
+.slide img {
+ width: 100%;
+ height: 534px;
+ object-fit: cover;
+ border-radius: 10px;
+ box-shadow: 3px 5px 50px rgba(0, 0, 0, 0.393);
+}
 </style>
 <link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min74047404.css?ver=5.9.3' media='all' />
 <style id='global-styles-inline-css'>
@@ -169,11 +190,22 @@ Skip to content</a>
 	</div>
 	<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-26e114d4" data-id="26e114d4" data-element_type="column">
 	<div class="elementor-widget-wrap elementor-element-populated">
+
 	<div class="elementor-element elementor-element-7b05eac2 elementor-widget elementor-widget-image" data-id="7b05eac2" data-element_type="widget" data-widget_type="image.default">
-	<div class="elementor-widget-container">
+	<!-- <div class="elementor-widget-container">
 	<img width="800" height="534" src="../img/img/artisant1.jpg" class="attachment-large size-large" alt="" loading="lazy" style="border-radius: 10px;box-shadow: 3px 5px 50px rgba(0, 0, 0, 0.393);"/> 
-</div>
+</div> -->
+
+<!-- slide nos formartions  -->
+<div class="slide"  >
+	<img width="800" height="534" src="../img/img1/vue-face-smiley-femme-noire-qui-dirige-entreprise.jpg" alt="Image 1" style="border-radius: 10px;box-shadow: 3px 5px 50px rgba(0, 0, 0, 0.393);"/>
+   </div>
+   <div class="slide"  >
+	<img width="800" height="534" src="../img/img1/communaute-plans-moyens-travaillant-ensemble.jpg" alt="Image 2" style="border-radius: 10px;box-shadow: 3px 5px 50px rgba(0, 0, 0, 0.393);"/>
+   </div>
 	</div>
+
+
 	</div>
 	</div>
 	</div>
@@ -621,22 +653,33 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 
 
 
+
+
+
+<!-- slide nos formations  -->
+
+
 <script>
-	var slideIndex = 0;
-	showSlides();
-	
-	function showSlides() {
-	 var i;
-	 var slides = document.getElementsByClassName("mySlides");
-	 for (i = 0; i < slides.length; i++) {
-		slides[i].style.opacity = "0";
-	 }
-	 slideIndex++;
-	 if (slideIndex > slides.length) {slideIndex = 1}
-	 slides[slideIndex-1].style.opacity = "1";
-	 setTimeout(showSlides, 10000); // Change image every 10 seconds
-	}
-	</script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].classList.add("active");
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+</script>
+
+
+
 
 
 </body>
