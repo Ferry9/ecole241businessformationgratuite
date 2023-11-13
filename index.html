@@ -793,7 +793,7 @@ setTimeout(() => {
     imageElement.src = currentImage;
     imageElement.style.width = '100%';
     imageElement.style.height = 'auto';
-    imageElement.style.transition = 'transform 2s'; // 2-second transition for zoom effect
+    imageElement.style.transition = 'transform 8s'; // 2-second transition for zoom effect
     imageContainer.appendChild(imageElement);
 
     // Show the SweetAlert2 popup with the initial image
@@ -816,7 +816,7 @@ setTimeout(() => {
     // Function to update the slider image every 5 seconds
     function updateSliderImage() {
         // Zoom out the current image
-        imageElement.style.transform = 'scale(0.8)';
+        imageElement.style.transform = 'scale(0.85)';
 
         setTimeout(() => {
             if (currentImage === './img/img1/img6.jpg') {

@@ -36,9 +36,25 @@ img.emoji {
 
 .slide {
         display: none;
-		/* transition: opacity 4s ease-in-out; */
-		animation: slider 18s infinite;
+		/* transition: opacity 18s ease-in-out; */
+		animation: slide 18s infinite;
     }
+
+
+	
+/* keyframe */
+@keyframes slide {
+    0% {	
+      background-image: url("../img/img/tendance-ecommerce-afrique-cote-ivoire-2020.jpg");
+   }
+    50% {
+      background-image: url("../img/img1/img6.jpg");
+  
+   100% {
+    background-image: url("../img/img/tendance-ecommerce-afrique-cote-ivoire-2020.jpg");
+ }
+  }
+
 
 
 .slide img {
