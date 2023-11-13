@@ -4,6 +4,7 @@
 
 <!-- Mirrored from ecole241.business/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Nov 2023 16:12:00 GMT -->
 <head>
+
  
     <!-- Google tag (gtag.js) -->
     <script async src="../www.googletagmanager.com/gtag/js451a?id=G-30FQQ4HBVE"></script>
@@ -164,7 +165,7 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <div>
-                                        <img src="img/earth.png" alt="" width="400px" class="globe-img">
+                                        <img src="img/img/11-2-earth-free-download-png.png" alt="" width="400px" class="globe-img">
                                     </div>
                                     <div>
                                         <img src="img/business-3d-man-lying-on-stomach-with-laptop.png" alt="" width="450px" class="globe-img2">
@@ -773,43 +774,72 @@
 <!-- Deuxième svript -->
 
 <script>
-    setTimeout(() => {
-            const swalWithBootstrapButtons = Swal.mixin({
-                customClass: {
-                    confirmButton: 'btn btn-danger',
-                    cancelButton: 'btn btn-danger'
-                },
-                buttonsStyling: true
-            }, 3000)
+
+
+let currentImage = './img/img1/img6.jpg';
+let nextImage = './img/img/tendance-ecommerce-afrique-cote-ivoire-2020.jpg';
+
+setTimeout(() => {
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-danger',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: true
+    });
+
+    // Create a div element to hold the image inside the SweetAlert2 popup
+    const imageContainer = document.createElement('div');
+    const imageElement = document.createElement('img');
+    imageElement.id = 'swal2-image';
+    imageElement.src = currentImage;
+    imageElement.style.width = '100%';
+    imageElement.style.height = 'auto';
+    imageElement.style.transition = 'transform 2s'; // 2-second transition for zoom effect
+    imageContainer.appendChild(imageElement);
+
+    // Show the SweetAlert2 popup with the initial image
+    swalWithBootstrapButtons.fire({
+        background: '#000',
+        html: imageContainer,
+        imageAlt: 'Custom image',
+        title: '<span style="color: white;">Formation <span style="color: red;"> gratuite </span> pour booster vos ventes.</span>',
+        showCancelButton: true,
+        confirmButtonText: 'En savoir plus',
+        cancelButtonText: 'Fermer',
+        reverseButtons: true
+    });
+
+    // Function to update the slider image every 5 seconds
+    function updateSliderImage() {
+        // Zoom out the current image
+        imageElement.style.transform = 'scale(0)';
+
+        setTimeout(() => {
+            if (currentImage === './img/img1/img6.jpg') {
+                currentImage = nextImage;
+            } else {
+                currentImage = './img/img1/img6.jpg';
+            }
+
+            // Update the image source
+            imageElement.src = currentImage;
+
+            // Reset the transformation (zoom in)
+            imageElement.style.transform = 'scale(1)';
+        }, 2000); // 2 seconds for the zoom out, 2 seconds for the zoom in
+    }
+
+    // Set interval to update the slider image every 5 seconds
+    setInterval(updateSliderImage, 4000); // 4 seconds total (zoom out + zoom in)
+
+}, 3000);
 
 
 
-            swalWithBootstrapButtons.fire({
-                background: '#000',
-                imageUrl: './img/img/artisant1.jpg',
-                imageWidth: 500,
-                imageHeight: "auto",
-                imageAlt: 'Custom image',
-                title: '<span style="color: white;">Formation <span style="color: red;"> gratuite </span> pour booster vos ventes.</span>',
-                
-                //text: "You won't be able to revert this!",
 
-                showCancelButton: true,
-                
-                confirmButtonText: 'En savoir plus',
-                cancelButtonText: 'Fermer',
-                reverseButtons: true
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.document.location.href = 'Business_Information/index.html'
-                } else if (
-                    /* Read more about handling dismissals below */
-                    result.dismiss === Swal.DismissReason.cancel
-                ) {
-                    pass
-                }
-            });
-        }, 3000);
+
+
         
         (function($) { // Begin jQuery
             $(function() { // DOM ready
