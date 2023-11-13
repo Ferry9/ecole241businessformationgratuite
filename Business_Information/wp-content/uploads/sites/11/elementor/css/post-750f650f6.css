@@ -800,7 +800,7 @@
   .elementor-element.elementor-element-5c0b4008
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url(https://template.coomb.co/umi/wp-content/uploads/sites/11/2021/05/cover-gradient_optimized.jpg);
+  background-image: url;
   background-position: center center;
   background-size: cover;
 }
@@ -2110,6 +2110,7 @@ body.rtl
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
   background-image: url(https://template.coomb.co/umi/wp-content/uploads/sites/11/2021/05/cover-gradient_optimized.jpg);
+  /* background-color: black; */
   background-position: center center;
   background-size: cover;
 }
