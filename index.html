@@ -335,7 +335,7 @@
                             <br> Notre mission est de démontrer que le numérique est un puissant levier d'inclusion sociale et professionnel.
 
                         </p>
-                        <a href="./Business_Information/index.html" class="btn bouton" style="background-color: rgb(251, 22, 22);">En savoir plus</a>
+                        <a href="../ecole241businessformationgratuite/Business_Information/index.html" class="btn bouton" style="background-color: rgb(251, 22, 22);">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -774,8 +774,6 @@
 <!-- Deuxième svript -->
 
 <script>
-
-
 let currentImage = './img/img1/img6.jpg';
 let nextImage = './img/img/tendance-ecommerce-afrique-cote-ivoire-2020.jpg';
 
@@ -808,6 +806,11 @@ setTimeout(() => {
         confirmButtonText: 'En savoir plus',
         cancelButtonText: 'Fermer',
         reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Handle the "En savoir plus" button click
+            window.location.href = 'Business_Information/index.html'; // Replace with your desired URL
+        }
     });
 
     // Function to update the slider image every 5 seconds
@@ -834,6 +837,7 @@ setTimeout(() => {
     setInterval(updateSliderImage, 4000); // 4 seconds total (zoom out + zoom in)
 
 }, 3000);
+
 
 
 
